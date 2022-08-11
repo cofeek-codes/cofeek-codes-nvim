@@ -1,34 +1,37 @@
--- -- local keymap = vim.api.nvim_set_keymap
-
--- keymap.set('n', 'x', '"_x')
+-- local keymap = vim.api.nvim_set_keymap
+local map = vim.api.nvim_set_keymap
 local opts = { noremap = true, silent = true }
--- -- Increment/decrement
-vim.api.nvim_set_keymap('n', '+', '<C-a>', opts)
-vim.api.nvim_set_keymap('n', '-', '<C-x>', opts)
+map('n', 'x', '"_x', opts)
 
--- -- Delete a word backwards
--- keymap.set('n', 'dw', 'vb"_d')
+-- Increment/decrement
+map('n', '+', '<C-a>', opts)
+map('n', '-', '<C-x>', opts)
+-- save
+map('n', '<C-S>', ':w<Enter>', opts)
 
--- -- Select all
--- keymap.set('n', '<C-a>', 'gg<S-v>G')
+-- Delete a word backwards
+map('n', 'dw', 'vb"_d', opts)
 
--- -- Save with root permission (not working for now)
--- --vim.api.nvim_create_user_command('W', 'w !sudo tee > /dev/null %', {})
+-- Select all
+map('n', '<C-a>', 'gg<S-v>G', opts)
 
--- -- New tab
--- keymap.set('n', 'te', ':tabedit')
--- -- Split window
--- keymap.set('n', 'ss', ':split<Return><C-w>w')
--- keymap.set('n', 'sv', ':vsplit<Return><C-w>w')
--- -- Move window
--- keymap.set('n', '<Space>', '<C-w>w')
--- keymap.set('', 'sh', '<C-w>h')
--- keymap.set('', 'sk', '<C-w>k')
--- keymap.set('', 'sj', '<C-w>j')
--- keymap.set('', 'sl', '<C-w>l')
+-- Save with root permission (not working for now)
+--vim.api.nvim_create_user_command('W', 'w !sudo tee > /dev/null %', {})
 
--- -- Resize window
--- keymap.set('n', '<C-w><left>', '<C-w><')
--- keymap.set('n', '<C-w><right>', '<C-w>>')
--- keymap.set('n', '<C-w><up>', '<C-w>+')
--- keymap.set('n', '<C-w><down>', '<C-w>-')
+-- New tab
+map('n', 'te', ':tabedit', opts)
+-- Split window
+map('n', 'ss', ':split<Return><C-w>w', opts)
+map('n', 'sv', ':vsplit<Return><C-w>w', opts)
+-- Move window
+map('n', '<Space>', '<C-w>w', opts)
+map('', 'sh', '<C-w>h', opts)
+map('', 'sk', '<C-w>k', opts)
+map('', 'sj', '<C-w>j', opts)
+map('', 'sl', '<C-w>l', opts)
+
+-- Resize window
+map('n', '<C-w><left>', '<C-w><', opts)
+map('n', '<C-w><right>', '<C-w>>', opts)
+map('n', '<C-w><up>', '<C-w>+', opts)
+map('n', '<C-w><down>', '<C-w>-', opts)
