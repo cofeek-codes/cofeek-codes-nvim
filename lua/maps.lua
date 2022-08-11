@@ -19,12 +19,15 @@ map('n', 'dw', 'vb"_d', opts)
 
 -- Select all
 map('n', '<C-a>', 'gg<S-v>G', opts)
+-- Undo
+map('n', '<C-z>', 'u', opts)
+
 
 -- Save with root permission (not working for now)
 --vim.api.nvim_create_user_command('W', 'w !sudo tee > /dev/null %', {})
 
 -- New tab
-map('n', 'te', ':tabedit', opts)
+map('n', 'te', ':tabedit<Return>', opts)
 -- Split window
 map('n', 'ss', ':split<Return><C-w>w', opts)
 map('n', 'sv', ':vsplit<Return><C-w>w', opts)
