@@ -8,6 +8,11 @@ map('n', '+', '<C-a>', opts)
 map('n', '-', '<C-x>', opts)
 -- save
 map('n', '<C-S>', ':w<Enter>', opts)
+-- force quit
+map('n', 'qq', ':qa!<Enter>', opts)
+-- save and quit
+map('n', 'sq', ':wq<Enter>', opts)
+
 
 -- Delete a word backwards
 map('n', 'dw', 'vb"_d', opts)
