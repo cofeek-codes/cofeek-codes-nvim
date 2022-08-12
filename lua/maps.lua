@@ -12,6 +12,9 @@ map('n', '<C-S>', ':w<Enter>', opts)
 map('n', 'qq', ':qa!<Enter>', opts)
 -- save and quit
 map('n', 'sq', ':wq<Enter>', opts)
+-- quick insert-normal
+map('n', '<C-]>', 'i', opts)
+
 
 
 -- Delete a word backwards
