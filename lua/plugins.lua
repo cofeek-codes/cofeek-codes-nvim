@@ -16,5 +16,5 @@ packer.startup(function(use)
   requires = {'tjdevries/colorbuddy.nvim'}
  }
  use 'hoob3rt/lualine.nvim'
-
+ use 'neovim/nvim-lspconfig'
 end)
