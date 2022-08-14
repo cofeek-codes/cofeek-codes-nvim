@@ -14,7 +14,7 @@ map('n', 'qq', ':qa!<Enter>', opts)
 map('n', 'sq', ':wq<Enter>', opts)
 -- quick insert-normal
 map('n', '<C-]>', 'i', opts)
-
+map('n', '<C-Space>', '<C-N>', opts)
 
 
 -- Delete a word backwards
