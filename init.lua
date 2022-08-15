@@ -7,3 +7,4 @@ local has = function(x)
 end
 
 require'lspconfig'.pyright.setup{}
+require'lspconfig'.tsserver.setup{}
