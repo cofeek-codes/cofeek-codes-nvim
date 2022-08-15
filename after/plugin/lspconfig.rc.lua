@@ -25,6 +25,12 @@ nvim_lsp.html.setup = {
   filetypes = {"html", "twig"},
   cmd = {"vscode-html-language-server", "--stdio"}
 }
+-- nvim_lsp.phpactor.setup = {
+--   on_attach = on_attach,
+--   filetypes = {"php"},
+--   cmd = {"phpactor", "language-server"}
+-- }
+
 
 nvim_lsp.sumneko_lua.setup {
   on_attach = on_attach,
