@@ -27,6 +27,7 @@ packer.startup(function(use)
 'nvim-treesitter/nvim-treesitter',
 run = ':TSUpdate'
  }
+ use 'kyazdani42/nvim-web-devicons'
  use 'windwp/nvim-autopairs'
  use 'windwp/nvim-ts-autotag'
  use 'nvim-lua/plenary.nvim'
