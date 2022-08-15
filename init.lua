@@ -8,3 +8,4 @@ end
 
 require 'lspconfig'.pyright.setup {}
 require 'lspconfig'.tsserver.setup {}
+require 'lspconfig'.html.setup{}
