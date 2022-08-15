@@ -21,6 +21,7 @@ packer.startup(function(use)
  use 'hrsh7th/cmp-buffer'
  use 'hrsh7th/cmp-nvim-lsp'
  use 'hrsh7th/nvim-cmp'
+ use 'L3MON4D3/LuaSnip'
 --  use 'windwp/nvim-autopairs'
 --  use 'windwp/nvim-ts-autotag'
 end)
