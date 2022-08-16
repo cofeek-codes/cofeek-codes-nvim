@@ -20,12 +20,12 @@ require 'lspconfig'.html.setup {
 require 'lspconfig'.cssls.setup {
   capabilities = capabilities,
 }
+require'lspconfig'.intelephense.setup{}
 
 
 require('gitsigns').setup {}
 require("mason").setup()
 require("mason-lspconfig").setup()
 -- require'lspconfig'.phpactor.setup{}
--- require'lspconfig'.intelephense.setup{}
 
 vim.cmd [[autocmd BufWritePre <buffer> lua vim.lsp.buf.formatting_sync()]]
