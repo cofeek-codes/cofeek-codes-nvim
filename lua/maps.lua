@@ -8,6 +8,8 @@ map('n', '+', '<C-a>', opts)
 map('n', '-', '<C-x>', opts)
 -- save
 map('n', '<C-S>', ':Prettier<Enter>:w<Enter>', opts)
+-- map('n', '<C-S>', ':w<Enter>', opts)
+
 -- force quit
 map('n', 'qq', ':qa!<Enter>', opts)
 -- save and quit

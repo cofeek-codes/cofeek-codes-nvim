@@ -19,3 +19,5 @@ require'lspconfig'.cssls.setup {
   capabilities = capabilities,
 }
 -- require'lspconfig'.phpactor.setup{}
+
+vim.cmd [[autocmd BufWritePre <buffer> lua vim.lsp.buf.formatting_sync()]]
