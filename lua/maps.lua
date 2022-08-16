@@ -1,3 +1,4 @@
+
 -- local keymap = vim.api.nvim_set_keymap
 local map = vim.api.nvim_set_keymap
 local opts = { noremap = true, silent = true }
@@ -19,6 +20,8 @@ map('n', '<C-]>', 'i', opts)
 map('n', '<C-Space>', '<C-N>', opts)
 
 
+
+
 -- Delete a word backwards
 map('n', 'dw', 'vb"_d', opts)
 
@@ -34,6 +37,9 @@ map('n', '<C-z>', 'u', opts)
 
 -- New tab
 map('n', 'te', ':tabedit<Return>', opts)
+
+
+
 -- Split window
 map('n', 'ss', ':split<Return><C-w>w', opts)
 map('n', 'sv', ':vsplit<Return><C-w>w', opts)
