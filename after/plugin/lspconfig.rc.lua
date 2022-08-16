@@ -20,11 +20,11 @@ nvim_lsp.tsserver.setup = {
   cmd = {"typescript-language-server", "--stdio"}
 }
 
-nvim_lsp.html.setup = {
-  on_attach = on_attach,
-  filetypes = {"html", "twig"},
-  cmd = {"vscode-html-language-server", "--stdio"}
-}
+-- nvim_lsp.html.setup = {
+--   on_attach = on_attach,
+--   filetypes = {"html", "twig"},
+--   cmd = {"vscode-html-language-server", "--stdio"}
+-- }
 
 nvim_lsp.intelephense.setup = {
   on_attach = on_attach,

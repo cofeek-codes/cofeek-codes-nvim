@@ -14,10 +14,14 @@ capabilities.textDocument.completion.completionItem.snippetSupport = true
 
 require 'lspconfig'.pyright.setup {}
 require 'lspconfig'.tsserver.setup {}
-require 'lspconfig'.html.setup{}
+require 'lspconfig'.html.setup{
+  capabilities = capabilities,
+}
 require'lspconfig'.cssls.setup {
   capabilities = capabilities,
 }
+
+
 require('gitsigns').setup {}
 require("mason").setup()
 require("mason-lspconfig").setup()
