@@ -42,5 +42,7 @@ run = ':TSUpdate'
  use {
   'dinhhuy258/git.nvim'
 }
+ use { "williamboman/mason.nvim" }
+ use "williamboman/mason-lspconfig.nvim"
 end)
 

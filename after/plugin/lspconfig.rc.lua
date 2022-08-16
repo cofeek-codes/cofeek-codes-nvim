@@ -25,6 +25,12 @@ nvim_lsp.html.setup = {
   filetypes = {"html", "twig"},
   cmd = {"vscode-html-language-server", "--stdio"}
 }
+
+nvim_lsp.intelephense.setup = {
+  on_attach = on_attach,
+  filetypes = {"php"},
+  cmd = {"intelephense", "--stdio"}
+}
 -- nvim_lsp.phpactor.setup = {
 --   on_attach = on_attach,
 --   filetypes = {"php"},
