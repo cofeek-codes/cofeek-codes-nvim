@@ -7,7 +7,7 @@ map('n', 'x', '"_x', opts)
 map('n', '+', '<C-a>', opts)
 map('n', '-', '<C-x>', opts)
 -- save
-map('n', '<C-S>', ':w<Enter>', opts)
+map('n', '<C-S>', ':Prettier<Enter>:w<Enter>', opts)
 -- force quit
 map('n', 'qq', ':qa!<Enter>', opts)
 -- save and quit
@@ -25,6 +25,7 @@ map('n', '<C-a>', 'gg<S-v>G', opts)
 -- Undo
 map('n', '<C-z>', 'u', opts)
 
+-- map('n', '<C-s>', ':Prettier<Enter>', opts)
 
 -- Save with root permission (not working for now)
 --vim.api.nvim_create_user_command('W', 'w !sudo tee > /dev/null %', {})
