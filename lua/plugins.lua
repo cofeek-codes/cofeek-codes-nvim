@@ -34,6 +34,6 @@ run = ':TSUpdate'
  use 'nvim-telescope/telescope.nvim'
  use 'nvim-telescope/telescope-file-browser.nvim'
  use 'norcalli/nvim-colorizer.lua'
-
+use 'akinsho/nvim-bufferline.lua'
 end)
 
