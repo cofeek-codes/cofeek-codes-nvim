@@ -18,6 +18,7 @@ require 'lspconfig'.html.setup{}
 require'lspconfig'.cssls.setup {
   capabilities = capabilities,
 }
+require('gitsigns').setup {}
 -- require'lspconfig'.phpactor.setup{}
 
 vim.cmd [[autocmd BufWritePre <buffer> lua vim.lsp.buf.formatting_sync()]]
