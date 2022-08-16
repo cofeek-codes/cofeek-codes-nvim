@@ -4,7 +4,8 @@ if (not themer) then
 end
 
 themer.setup({
-  colorscheme = "onedark",
+  enable_installer = true,
+  colorscheme = "dracula",
   styles = {
     ["function"]    = { style = 'italic' },
     functionbuiltin = { style = 'italic' },
