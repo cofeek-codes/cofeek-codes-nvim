@@ -3,6 +3,9 @@ if (not status) then
 print("Tabs Dosent Work")
 end
 
+
+
+
 bufferline.setup({
   options = {
     mode = "tabs",
