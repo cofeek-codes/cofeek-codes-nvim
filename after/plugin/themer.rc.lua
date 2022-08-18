@@ -6,6 +6,7 @@ end
 themer.setup({
   enable_installer = true,
   colorscheme = "dracula",
+  transparent = true,
   styles = {
     ["function"]    = { style = 'italic' },
     functionbuiltin = { style = 'italic' },
