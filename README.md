@@ -34,8 +34,7 @@ Original
 
 - ['themercorp/themer.lua'](https://github.com/themercorp/themer.lua) - A list of cool themes
 - ['tpope/vim-commentary'](https://github.com/tpope/vim-commentary) - Quickly comment/uncomment lines of code
-
-- ['nvim-lua/plenary.nvim'](https://github.com/nvim-lua/plenary.nvim) - Stuff improving [telescope](https://github.com/nvim-telescope/telescope.nvim)
+- ['mattn/emmet-vim'](https://github.com/mattn/emmet-vim) - Emmmet
 
 ---
 
@@ -61,3 +60,4 @@ Added by me
 - `Ctrl+e` to open file explorer
 - `F2` to rename
 - `Ctrl+]` to go to insert mode
+- `<Emmet shortcut>,,` to emmet autocomplete
