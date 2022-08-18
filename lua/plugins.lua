@@ -16,6 +16,7 @@ packer.startup(function(use)
   }
   use 'hoob3rt/lualine.nvim'
   use 'neovim/nvim-lspconfig'
+  use 'mattn/emmet-vim'
   use 'onsails/lspkind-nvim'
   use 'hrsh7th/cmp-buffer'
   use 'hrsh7th/cmp-nvim-lsp'
