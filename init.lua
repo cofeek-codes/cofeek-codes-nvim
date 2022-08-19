@@ -22,7 +22,6 @@ require 'lspconfig'.cssls.setup {
 }
 require 'lspconfig'.intelephense.setup {}
 
-
 require('gitsigns').setup {}
 require("mason").setup()
 require("mason-lspconfig").setup()

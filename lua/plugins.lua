@@ -29,6 +29,7 @@ packer.startup(function(use)
   }
   use 'themercorp/themer.lua'
   use 'kyazdani42/nvim-web-devicons'
+  use 'lumiliet/vim-twig'
   use 'windwp/nvim-autopairs'
   use 'windwp/nvim-ts-autotag'
   use 'nvim-lua/plenary.nvim'
