@@ -19,6 +19,7 @@ packer.startup(function(use)
   use 'mattn/emmet-vim'
   use 'onsails/lspkind-nvim'
   use 'hrsh7th/cmp-buffer'
+  use 'tpope/vim-surround'
   use 'hrsh7th/cmp-nvim-lsp'
   use 'hrsh7th/nvim-cmp'
   use 'L3MON4D3/LuaSnip'
