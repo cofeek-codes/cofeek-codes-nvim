@@ -1,4 +1,3 @@
-
 -- local keymap = vim.api.nvim_set_keymap
 local map = vim.api.nvim_set_keymap
 local opts = { noremap = true, silent = true }
@@ -20,8 +19,7 @@ map('n', '<C-]>', 'i', opts)
 map('n', '<C-Space>', '<C-N>', opts)
 
 
-
-
+map('n', '<C-t>', ':Neotree<Enter>', opts)
 -- Delete a word backwards
 map('n', 'dw', 'vb"_d', opts)
 
