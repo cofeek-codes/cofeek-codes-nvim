@@ -25,16 +25,12 @@ My Neovim config extended form [craftzdog](https://github.com/craftzdog/dotfiles
 - [windwp/nvim-autopairs](https://github.com/windwp/nvim-autopairs) - Autopairs
 - [windwp/nvim-ts-autotag](https://github.com/windwp/nvim-ts-autotag) - Auto close and auto rename html tag
 - [akinsho/nvim-bufferline.lua](https://github.com/akinsho/nvim-bufferline.lua) - A snazzy bufferline (Tabs)
-- [lewis6991/gitsigns.nvim](https://github.com/lewis6991/gitsigns.nvim) - Git integration for buffers
-- [dinhhuy258/git.nvim](https://github.com/dinhhuy258/git.nvim) - A simple clone of the plugin vim-fugitive
 
 ---
 
 Original
 
-- ['themercorp/themer.lua'](https://github.com/themercorp/themer.lua) - A list of cool themes
-- ['tpope/vim-commentary'](https://github.com/tpope/vim-commentary) - Quickly comment/uncomment lines of code
-- ['mattn/emmet-vim'](https://github.com/mattn/emmet-vim) - Emmmet
+<!-- - ['mattn/emmet-vim'](https://github.com/mattn/emmet-vim) - Emmmet -->
 
 ---
 
@@ -60,4 +56,4 @@ Added by me
 - `Ctrl+e` to open file explorer
 - `F2` to rename
 - `Ctrl+]` to go to insert mode
-- `<Emmet shortcut>,,` to emmet autocomplete
+<!-- - `<Emmet shortcut>,,` to emmet autocomplete -->
