@@ -30,7 +30,7 @@ My Neovim config extended form [craftzdog](https://github.com/craftzdog/dotfiles
 
 Original
 
-<!-- - ['mattn/emmet-vim'](https://github.com/mattn/emmet-vim) - Emmmet -->
+- ['mattn/emmet-vim'](https://github.com/mattn/emmet-vim) - Emmmet
 
 ---
 
@@ -56,4 +56,4 @@ Added by me
 - `Ctrl+e` to open file explorer
 - `F2` to rename
 - `Ctrl+]` to go to insert mode
-<!-- - `<Emmet shortcut>,,` to emmet autocomplete -->
+- `<Emmet shortcut>,,` to emmet autocomplete
