@@ -25,7 +25,8 @@ ts.setup {
     "css",
     "html",
     "lua",
-    "c_sharp"
+    "c_sharp",
+    "markdown"
   },
   autotag = {
     enable = true,
