@@ -41,9 +41,9 @@ packer.startup(function(use)
   use 'hrsh7th/nvim-cmp'
   use 'onsails/lspkind-nvim'
   use 'williamboman/mason.nvim'
-  use 'williamboman/mason-lspconfig.nvim',
+  use 'williamboman/mason-lspconfig.nvim'
   use 'L3MON4D3/LuaSnip'
-  use ({'glepnir/lspsaga.nvim', branch = "version_2.2"})
+  use 'glepnir/lspsaga.nvim'
   -- lsp
   use 'wuelnerdotexe/vim-astro'
   use 'tpope/vim-surround'
