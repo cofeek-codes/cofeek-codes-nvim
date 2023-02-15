@@ -229,11 +229,6 @@ _G.packer_plugins = {
     path = "C:\\Users\\cofeek-codes\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\vim-astro",
     url = "https://github.com/wuelnerdotexe/vim-astro"
   },
-  ["vim-surround"] = {
-    loaded = true,
-    path = "C:\\Users\\cofeek-codes\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\vim-surround",
-    url = "https://github.com/tpope/vim-surround"
-  },
   ["vim-twig"] = {
     loaded = true,
     path = "C:\\Users\\cofeek-codes\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\vim-twig",

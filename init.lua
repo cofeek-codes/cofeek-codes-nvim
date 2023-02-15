@@ -14,7 +14,8 @@ capabilities.textDocument.completion.completionItem.snippetSupport = true
 -- require('gitsigns').setup {}
 require("mason").setup()
 require("mason-lspconfig").setup()
--- -- require'lspconfig'.phpactor.setup{}
+--  require'lspconfig'.phpactor.setup{}
+
 
 vim.cmd [[autocmd BufWritePre <buffer> lua vim.lsp.buf.formatting_sync()]]
 vim.g.user_emmet_leader_key = ','

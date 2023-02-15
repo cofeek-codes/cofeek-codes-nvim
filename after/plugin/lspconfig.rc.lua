@@ -87,10 +87,10 @@ nvim_lsp.html.setup {
 nvim_lsp.cssls.setup {
   capabilities = capabilities,
 }
-nvim_lsp.intelephense.setup = {
+nvim_lsp.intelephense.setup  {
   on_attach = on_attach,
-  filetypes = { "php" },
-  cmd = { "intelephense", "--stdio" }
+
+
 }
 nvim_lsp.astro.setup {}
 nvim_lsp.tailwindcss.setup {}
