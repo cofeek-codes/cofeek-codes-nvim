@@ -9,6 +9,7 @@ null_ls.setup {
     null_ls.builtins.formatting.prettier,
     null_ls.builtins.diagnostics.fish,
     null_ls.builtins.formatting.autopep8,
+    null_ls.builtins.formatting.phpcbf,
   },
   on_attach = function(client, bufnr)
     if client.server_capabilities.documentFormattingProvider then
