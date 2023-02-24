@@ -27,7 +27,8 @@ ts.setup {
     "lua",
     "c_sharp",
     "markdown",
-    "markdown_inline"
+    "markdown_inline",
+    "go"
   },
   autotag = {
     enable = true,
