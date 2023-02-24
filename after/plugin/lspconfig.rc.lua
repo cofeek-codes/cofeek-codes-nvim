@@ -95,6 +95,9 @@ nvim_lsp.intelephense.setup  {
 nvim_lsp.astro.setup {}
 nvim_lsp.tailwindcss.setup {}
 nvim_lsp.omnisharp.setup {}
+nvim_lsp.gopls.setup {}
+
+
 
 vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(
   vim.lsp.diagnostic.on_publish_diagnostics, {

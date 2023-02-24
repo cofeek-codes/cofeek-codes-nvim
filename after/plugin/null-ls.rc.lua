@@ -10,6 +10,10 @@ null_ls.setup {
     null_ls.builtins.diagnostics.fish,
     null_ls.builtins.formatting.autopep8,
     null_ls.builtins.formatting.phpcbf,
+    null_ls.builtins.formatting.golines,
+
+
+
   },
   on_attach = function(client, bufnr)
     if client.server_capabilities.documentFormattingProvider then
