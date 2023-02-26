@@ -10,10 +10,18 @@ vim.cmd [[packadd packer.nvim]]
 
 packer.startup(function(use)
     use 'wbthomason/packer.nvim'
-    use {
-    'svrana/neosolarized.nvim',
-    requires = { 'tjdevries/colorbuddy.nvim' }
-    }
+    -- use {
+    -- 'svrana/neosolarized.nvim',
+    -- requires = { 'tjdevries/colorbuddy.nvim' }
+    -- }
+
+    -- theme
+use{
+    'rose-pine/neovim',
+    as = 'rose-pine',
+
+}
+    -- theme
     use 'hoob3rt/lualine.nvim'
     use {
     "nvim-neo-tree/neo-tree.nvim",
