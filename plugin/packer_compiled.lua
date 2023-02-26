@@ -94,11 +94,6 @@ _G.packer_plugins = {
     path = "C:\\Users\\cofeek-codes\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\cmp-nvim-lsp",
     url = "https://github.com/hrsh7th/cmp-nvim-lsp"
   },
-  ["colorbuddy.nvim"] = {
-    loaded = true,
-    path = "C:\\Users\\cofeek-codes\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\colorbuddy.nvim",
-    url = "https://github.com/tjdevries/colorbuddy.nvim"
-  },
   ["emmet-vim"] = {
     loaded = true,
     path = "C:\\Users\\cofeek-codes\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\emmet-vim",
@@ -133,11 +128,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "C:\\Users\\cofeek-codes\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\neo-tree.nvim",
     url = "https://github.com/nvim-neo-tree/neo-tree.nvim"
-  },
-  ["neosolarized.nvim"] = {
-    loaded = true,
-    path = "C:\\Users\\cofeek-codes\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\neosolarized.nvim",
-    url = "https://github.com/svrana/neosolarized.nvim"
   },
   ["nui.nvim"] = {
     loaded = true,
@@ -228,6 +218,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "C:\\Users\\cofeek-codes\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\vim-astro",
     url = "https://github.com/wuelnerdotexe/vim-astro"
+  },
+  ["vim-surround"] = {
+    loaded = true,
+    path = "C:\\Users\\cofeek-codes\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\vim-surround",
+    url = "https://github.com/tpope/vim-surround"
   },
   ["vim-twig"] = {
     loaded = true,
