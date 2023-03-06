@@ -28,7 +28,8 @@ ts.setup {
     "c_sharp",
     "markdown",
     "markdown_inline",
-    "go"
+    "go",
+    "rust"
   },
   autotag = {
     enable = true,
