@@ -21,6 +21,10 @@ require("mason-lspconfig").setup()
 --  require'lspconfig'.phpactor.setup{}
 
 
+
+
+
+
 vim.cmd [[autocmd BufWritePre <buffer> lua vim.lsp.buf.formatting_sync()]]
 vim.g.user_emmet_leader_key = ','
 vim.g.user_emmet_mode = 'a'
