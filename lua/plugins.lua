@@ -52,6 +52,12 @@ use{
   use 'williamboman/mason-lspconfig.nvim'
   use 'L3MON4D3/LuaSnip'
   use 'glepnir/lspsaga.nvim'
+
+-- rust-lsp
+use 'simrat39/rust-tools.nvim'
+-- rust-lsp
+
+
   -- lsp
   use 'wuelnerdotexe/vim-astro'
   use 'tpope/vim-surround'
