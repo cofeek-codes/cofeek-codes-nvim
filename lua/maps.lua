@@ -60,3 +60,10 @@ map('n', '<C-w><down>', '<C-w>-', opts)
 vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
 vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
 
+-- center view after jupms 
+
+vim.keymap.set("n", "<Ctrl-d>", "<Ctrl-d>zz")
+vim.keymap.set("n", "<Ctrl-u>", "<Ctrl-u>zz")
+vim.keymap.set("n", "{", "{zz")
+vim.keymap.set("n", "}", "}zz")
+
