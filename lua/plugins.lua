@@ -80,5 +80,7 @@ use 'simrat39/rust-tools.nvim'
   --formatting
   use 'mattn/emmet-vim'
 
+-- time control
+  use 'wakatime/vim-wakatime'
 
 end)
