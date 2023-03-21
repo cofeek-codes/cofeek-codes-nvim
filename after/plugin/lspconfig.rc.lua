@@ -75,9 +75,10 @@ local capabilities = require('cmp_nvim_lsp').default_capabilities()
 
  nvim_lsp.pyright.setup {}
 nvim_lsp.tsserver.setup {
-  on_attach = on_attach,
-  -- filetypes = { "typescript", "typescriptreact", "typescript.tsx" },
-  -- cmd = { "typescript-language-server", "--stdio" },
+  on_attach = function(client, bufnr)
+        client.server_capabilities.documentFormattingProvider = false
+    end,
+
   capabilities = capabilities
 }
 nvim_lsp.jsonls.setup {}
