@@ -30,7 +30,9 @@ ts.setup {
     "markdown_inline",
     "go",
     "rust",
-    "prisma"
+    "prisma",
+    "c",
+    "cpp"
   },
   autotag = {
     enable = true,
