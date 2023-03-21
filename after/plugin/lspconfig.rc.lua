@@ -14,7 +14,7 @@ local enable_format_on_save = function(_, bufnr)
     group = augroup_format,
     buffer = bufnr,
     callback = function()
-      vim.lsp.buf.format({ bufnr = bufnr })
+      vim.lsp.buf.format({ bufnr = bufnr, async = true })
     end,
   })
 end

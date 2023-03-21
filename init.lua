@@ -25,7 +25,7 @@ require("mason-lspconfig").setup()
 
 
 
-vim.cmd [[autocmd BufWritePre <buffer> lua vim.lsp.buf.formatting_sync()]]
+vim.cmd [[autocmd BufWritePre <buffer> lua vim.lsp.buf.format({async = true})]]
 vim.g.user_emmet_leader_key = ','
 vim.g.user_emmet_mode = 'a'
 vim.g.astro_typescript = 'enable'
