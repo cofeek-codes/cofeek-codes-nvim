@@ -84,6 +84,9 @@ nvim_lsp.tsserver.setup {
 nvim_lsp.jsonls.setup {}
 nvim_lsp.html.setup {
   capabilities = capabilities,
+  on_attach = function(client, bufnr)
+      client.server_capabilities.documentFormattingProvider = false
+  end,
 }
 nvim_lsp.cssls.setup {
   capabilities = capabilities,
