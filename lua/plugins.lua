@@ -22,6 +22,7 @@ use{
 
 }
     -- theme
+
     use 'hoob3rt/lualine.nvim'
     use {
     "nvim-neo-tree/neo-tree.nvim",
@@ -53,9 +54,9 @@ use{
   use 'L3MON4D3/LuaSnip'
   use 'glepnir/lspsaga.nvim'
 
--- rust-lsp
+-- *.rs
 use 'simrat39/rust-tools.nvim'
--- rust-lsp
+-- *.rs
 
 
   -- lsp
