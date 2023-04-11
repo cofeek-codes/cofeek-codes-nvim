@@ -11,6 +11,7 @@ null_ls.setup {
     null_ls.builtins.formatting.autopep8,
     null_ls.builtins.formatting.phpcbf,
     null_ls.builtins.formatting.golines,
+    null_ls.builtins.formatting.cmake_format,
 
 
 

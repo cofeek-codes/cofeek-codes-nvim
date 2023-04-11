@@ -96,11 +96,13 @@ nvim_lsp.intelephense.setup  {
 
 
 }
+
 nvim_lsp.astro.setup {}
 nvim_lsp.tailwindcss.setup {}
 nvim_lsp.omnisharp.setup {}
 nvim_lsp.gopls.setup {}
 nvim_lsp.prismals.setup {}
+nvim_lsp.cmake.setup{}
 nvim_lsp.clangd.setup{}
 nvim_lsp.rust_analyzer.setup({
     on_attach = on_attach,
