@@ -19,7 +19,7 @@ capabilities.textDocument.completion.completionItem.snippetSupport = true
 require("mason").setup()
 require("mason-lspconfig").setup()
 --  require'lspconfig'.phpactor.setup{}
-
+require("git").setup()
 
 
 

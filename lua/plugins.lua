@@ -84,4 +84,5 @@ use 'simrat39/rust-tools.nvim'
 -- time control
   use 'wakatime/vim-wakatime'
 
+  use 'dinhhuy258/git.nvim'
 end)
