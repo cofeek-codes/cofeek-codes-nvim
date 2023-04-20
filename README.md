@@ -30,7 +30,7 @@ My Neovim config extended form [craftzdog](https://github.com/craftzdog/dotfiles
 
 Original
 
-- ['mattn/emmet-vim'](https://github.com/mattn/emmet-vim) - Emmmet
+- ['mattn/emmet-vim'](https://github.com/mattn/emmet-vim) - Emmet
 
 ---
 
