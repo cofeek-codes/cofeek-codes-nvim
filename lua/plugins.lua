@@ -85,4 +85,5 @@ use 'simrat39/rust-tools.nvim'
   use 'wakatime/vim-wakatime'
 
   use 'dinhhuy258/git.nvim'
+  use 'jreybert/vimagit'
 end)
