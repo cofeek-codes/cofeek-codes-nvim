@@ -48,6 +48,10 @@ use{
   use 'hrsh7th/cmp-buffer' -- nvim-cmp source for buffer words
   use 'hrsh7th/cmp-nvim-lsp' -- nvim-cmp source for neovim's built-in LSP
   use 'hrsh7th/nvim-cmp'
+  use 'hrsh7th/cmp-path'
+use 'hrsh7th/cmp-cmdline'
+    use "saadparwaiz1/cmp_luasnip"
+       use "js-everts/cmp-tailwind-colors"
   use 'onsails/lspkind-nvim'
   use 'williamboman/mason.nvim'
   use 'williamboman/mason-lspconfig.nvim'
