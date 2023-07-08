@@ -8,7 +8,7 @@ mason.setup {
     --  still works somehow
     automatic_installation = false,
     ensure_installed = { 'tsserver', 'pyright', 'jsonls', 'html', 'cssls', 'intelephense', 'astro', 'tailwindcss',
-        'omnisharp', 'gopls', 'rust_analyzer', 'prismals', 'clangd', 'lua_language_server' },
+        'omnisharp', 'gopls', 'rust_analyzer', 'prismals', 'clangd', 'lua_ls' },
 }
 
 -- formatters
