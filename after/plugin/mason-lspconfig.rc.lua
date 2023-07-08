@@ -9,3 +9,8 @@ mason.setup {
     automatic_installation = false,
     ensure_installed = { 'tsserver', 'pyright', 'jsonls', 'html', 'cssls', 'intelephense', 'astro', 'tailwindcss', 'omnisharp', 'gopls', 'rust_analyzer', 'prismals', 'clangd'},
 }
+
+require("mason-null-ls").setup({
+    automatic_installation = false,
+    ensure_installed = { "prettier", "phpfcb", "golines" }
+})

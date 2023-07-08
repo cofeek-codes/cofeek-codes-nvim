@@ -89,7 +89,15 @@ local p = {
         dependencies = { "nvim-treesitter/nvim-treesitter" }
     },
     --formatting
-    "jose-elias-alvarez/null-ls.nvim",
+    {
+        "jay-babu/mason-null-ls.nvim",
+        event = { "BufReadPre", "BufNewFile" },
+        dependencies = {
+            "williamboman/mason.nvim",
+            "jose-elias-alvarez/null-ls.nvim",
+        },
+
+    },
     --formatting
     "mattn/emmet-vim",
 
