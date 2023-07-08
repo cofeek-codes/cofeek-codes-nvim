@@ -33,8 +33,9 @@ local kind_icons = {
 }
 
 local borderstyle = {
-    border = {"╭", "─", "╮", "│", "╯", "─", "╰", "│"},
-    winhighlight = "Normal:CmpPmenu,CursorLine:PmenuSel,Search:None"
+    border = { "╭", "─", "╮", "│", "╯", "─", "╰", "│" },
+    winhighlight = "Normal:CmpPmenu,CursorLine:PmenuSel,Search:None",
+    scrollbar = false
 }
 
 cmp.setup(
@@ -60,20 +61,20 @@ cmp.setup(
         ),
         sources = cmp.config.sources(
             {
-                {name = "nvim_lsp"},
-                {name = "buffer"}
+                { name = "nvim_lsp" },
+                { name = "buffer" }
             }
         ),
         formatting = {
-            fields = {"kind", "abbr", "menu"},
+            fields = { "kind", "abbr", "menu" },
             format = function(entry, vim_item)
                 vim_item.menu =
                     ({
-                    nvim_lsp = "[LSP]",
-                    luasnip = "[Snip]",
-                    buffer = "[Buff]",
-                    path = "[Path]"
-                })[entry.source.name]
+                        nvim_lsp = "[LSP]",
+                        luasnip = "[Snip]",
+                        buffer = "[Buff]",
+                        path = "[Path]"
+                    })[entry.source.name]
 
                 -- for tailwind colors
                 if vim_item.kind == "Color" then
@@ -90,13 +91,13 @@ cmp.setup(
             end
         },
         preselect = cmp.PreselectMode.None,
-        completion = {completeopt = "noselect"},
+        completion = { completeopt = "noselect" },
         sources = cmp.config.sources(
             {
-                {name = "nvim_lsp", priority = 1000},
-                {name = "luasnip", priority = 750},
-                {name = "buffer", priority = 500},
-                {name = "path", priority = 250}
+                { name = "nvim_lsp", priority = 1000 },
+                { name = "luasnip",  priority = 750 },
+                { name = "buffer",   priority = 500 },
+                { name = "path",     priority = 250 }
             }
         ),
         duplicates = {
