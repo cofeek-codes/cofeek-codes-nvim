@@ -59,12 +59,7 @@ cmp.setup(
                 )
             }
         ),
-        sources = cmp.config.sources(
-            {
-                { name = "nvim_lsp" },
-                { name = "buffer" }
-            }
-        ),
+
         formatting = {
             fields = { "kind", "abbr", "menu" },
             format = function(entry, vim_item)
