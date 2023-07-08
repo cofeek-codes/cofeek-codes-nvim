@@ -24,7 +24,12 @@ local p = {
     },
     -- theme
 
-    "hoob3rt/lualine.nvim",
+    {
+        "hoob3rt/lualine.nvim",
+        dependencies = {
+            "arkav/lualine-lsp-progress"
+        }
+    },
     {
         "nvim-neo-tree/neo-tree.nvim",
         branch = "v2.x",
