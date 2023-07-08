@@ -1,4 +1,3 @@
---vim.lsp.set_log_level("debug")
 
 local status, nvim_lsp = pcall(require, "lspconfig")
 if (not status) then
@@ -98,6 +97,7 @@ nvim_lsp.intelephense.setup  {
 }
 
 nvim_lsp.astro.setup {}
+nvim_lsp.lua_ls.setup {}
 nvim_lsp.tailwindcss.setup {}
 nvim_lsp.omnisharp.setup {}
 nvim_lsp.gopls.setup {}
