@@ -27,7 +27,7 @@ local p = {
 	{
 		"hoob3rt/lualine.nvim",
 		dependencies = {
-			"arkav/lualine-lsp-progress",
+			{ "arkav/lualine-lsp-progress", event = "BufRead" },
 		},
 	},
 	{
