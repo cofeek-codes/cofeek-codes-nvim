@@ -5,12 +5,13 @@ require("mason").setup()
 require("mason-lspconfig").setup()
 
 mason.setup {
---  still works somehow
+    --  still works somehow
     automatic_installation = false,
-    ensure_installed = { 'tsserver', 'pyright', 'jsonls', 'html', 'cssls', 'intelephense', 'astro', 'tailwindcss', 'omnisharp', 'gopls', 'rust_analyzer', 'prismals', 'clangd'},
+    ensure_installed = { 'tsserver', 'pyright', 'jsonls', 'html', 'cssls', 'intelephense', 'astro', 'tailwindcss',
+        'omnisharp', 'gopls', 'rust_analyzer', 'prismals', 'clangd' },
 }
 
 require("mason-null-ls").setup({
     automatic_installation = false,
-    ensure_installed = { "prettier", "phpfcb", "golines" }
+    ensure_installed = { "prettier", "phpcbf", "golines" }
 })
