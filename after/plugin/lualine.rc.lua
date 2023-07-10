@@ -3,7 +3,7 @@ if (not status) then return end
 
 
 local config = {
-  theme = "catppuccin",
+  theme = "auto",
   options = {
     component_separators = " ",
     section_separators = { left = "", right = "" },

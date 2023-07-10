@@ -15,11 +15,9 @@ local p = {
 
 	-- theme
 	{
-		"catppuccin/nvim",
-		name = "catppuccin",
-		priority = 1000,
-		opts = {
-			transparent_background = false,
+		"svrana/neosolarized.nvim",
+		dependencies = {
+			{ "tjdevries/colorbuddy.nvim" },
 		},
 	},
 	-- theme
