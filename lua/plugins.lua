@@ -92,6 +92,22 @@ local p = {
 	},
 	--formatting
 	"mattn/emmet-vim",
+	{
+		"j-hui/fidget.nvim",
+		event = "LspAttach",
+		config = function()
+			require("fidget").setup({
+				text = {
+					spinner = "meter",
+				},
+				window = {
+					blend = 0,
+				},
+			})
+		end,
+	},
+
+
 
 	-- time control
 	"wakatime/vim-wakatime",
