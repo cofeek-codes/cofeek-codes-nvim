@@ -33,10 +33,11 @@ local kind_icons = {
 }
 
 local borderstyle = {
-    border = { "╭", "─", "╮", "│", "╯", "─", "╰", "│" },
-    winhighlight = "Normal:CmpPmenu,CursorLine:PmenuSel,Search:None",
-    scrollbar = false
+    border = "rounded",
+    winhighlight = "Normal:Pmenu,CursorLine:PmenuSel,Search:None",
+    scrollbar = false,
 }
+
 
 cmp.setup(
     {
@@ -111,6 +112,9 @@ cmp.setup(
         },
     }
 )
+
+
+
 
 -- " Use <Tab> and <S-Tab> to navigate through popup menu
 -- inoremap <expr> <Tab>   pumvisible() ? "\<C-n>" : "\<Tab>"
