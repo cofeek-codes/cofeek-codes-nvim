@@ -3,8 +3,8 @@ if (not status) then return end
 
 
 local config = {
-  theme = "auto",
   options = {
+    theme = "solarized_dark",
     component_separators = " ",
     section_separators = { left = "", right = "" },
   },
