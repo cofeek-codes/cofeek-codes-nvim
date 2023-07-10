@@ -16,9 +16,7 @@ local p = {
 
 	{
 		"hoob3rt/lualine.nvim",
-		dependencies = {
-			{ "arkav/lualine-lsp-progress", event = "BufRead" },
-		},
+
 	},
 	{
 		"nvim-neo-tree/neo-tree.nvim",
@@ -106,7 +104,19 @@ local p = {
 			})
 		end,
 	},
-
+	{
+		"stevearc/dressing.nvim",
+		event = "BufEnter",
+		config = function()
+			require("dressing").setup({
+				input = {
+					win_options = {
+						winblend = 0,
+					},
+				},
+			})
+		end,
+	},
 
 
 	-- time control
