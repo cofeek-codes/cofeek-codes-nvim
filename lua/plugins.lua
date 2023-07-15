@@ -119,6 +119,7 @@ local p = {
 					pattern = "solarized",
 					callback = function()
 						vim.api.nvim_set_hl(0, 'NormalFloat', { bg = 'none' })
+						vim.api.nvim_set_hl(0, 'Pmenu', { link = 'TelescopeNormal' })
 						vim.api.nvim_set_hl(0, 'LineNr', { fg = '#586e75', bg = 'none' })
 						vim.api.nvim_set_hl(0, 'CursorLineNr', { fg = '#b58900', bg = 'none' })
 						vim.api.nvim_set_hl(0, 'CursorLine', { fg = 'none', bg = '#002b36' })

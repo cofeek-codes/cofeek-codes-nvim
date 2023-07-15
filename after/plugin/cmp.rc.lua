@@ -34,7 +34,7 @@ local kind_icons = {
 
 local borderstyle = {
     border = "rounded",
-    winhighlight = "Normal:TelescopeNormal,CursorLine:PmenuSel,Search:None",
+    -- winhighlight = "Normal:TelescopeNormal,CursorLine:PmenuSel,Search:None",
     scrollbar = false,
 }
 
