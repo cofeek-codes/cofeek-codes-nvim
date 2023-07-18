@@ -26,6 +26,10 @@ local keymap = vim.keymap.set
 -- use <C-t> to jump back
 keymap("n", "gh", "<cmd>Lspsaga lsp_finder<CR>")
 
+-- Float terminal
+keymap({ "n", "t" }, "<A-t>", "<cmd>Lspsaga term_toggle<CR>")
+
+
 -- Code action
 keymap("n", "g.", "<cmd>Lspsaga code_action<CR>")
 
@@ -75,6 +79,3 @@ keymap("n", "K", "<cmd>Lspsaga hover_doc<CR>")
 -- Callhierarchy
 keymap("n", "<Leader>ci", "<cmd>Lspsaga incoming_calls<CR>")
 keymap("n", "<Leader>co", "<cmd>Lspsaga outgoing_calls<CR>")
-
--- Float terminal
-keymap({ "n", "t" }, "<A-d>", "<cmd>Lspsaga term_toggle<CR>")
