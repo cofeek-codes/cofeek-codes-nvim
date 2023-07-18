@@ -1,63 +1,51 @@
 local status, lualine = pcall(require, "lualine")
 if (not status) then return end
 
-
-local config = {
+lualine.setup {
   options = {
-    theme = "solarized_dark",
-    component_separators = " ",
-    section_separators = { left = "", right = "" },
+    icons_enabled = true,
+    theme = 'solarized_dark',
+    section_separators = { left = '', right = '' },
+    component_separators = { left = '', right = '' },
+    disabled_filetypes = {}
   },
   sections = {
-    lualine_b = {
+    lualine_a = { 'mode' },
+    lualine_b = { 'branch' },
+    lualine_c = { {
+      'filename',
+      file_status = true, -- displays file status (readonly status, modified status)
+      path = 0            -- 0 = just filename, 1 = relative path, 2 = absolute path
+    } },
+    lualine_x = {
+      {
+        'diagnostics',
+        sources = { "nvim_diagnostic" },
+        symbols = {
+          error = ' ',
+          warn = ' ',
+          info = ' ',
+          hint = ' '
+        }
+      },
+      'encoding',
       'filetype'
     },
-    lualine_c = {
-      'filename'
-
-    },
-    lualine_x = {
-      'diagnostics'
-    },
-
+    lualine_y = { 'progress' },
+    lualine_z = { 'location' }
   },
-  extensions = { "quickfix", "fugitive" },
+  inactive_sections = {
+    lualine_a = {},
+    lualine_b = {},
+    lualine_c = { {
+      'filename',
+      file_status = true, -- displays file status (readonly status, modified status)
+      path = 1            -- 0 = just filename, 1 = relative path, 2 = absolute path
+    } },
+    lualine_x = { 'location' },
+    lualine_y = {},
+    lualine_z = {}
+  },
+  tabline = {},
+  extensions = { 'fugitive' }
 }
-
-
-
--- Inserts a component in lualine_c at left section
-local function ins_left(component)
-  table.insert(config.sections.lualine_c, component)
-end
-
-
-
-local function ins_right(component)
-  table.insert(config.sections.lualine_x, component)
-end
-
-
-
-ins_right {
-  -- Lsp server name .
-  function()
-    local msg = 'No Active Lsp'
-    local buf_ft = vim.api.nvim_buf_get_option(0, 'filetype')
-    local clients = vim.lsp.get_active_clients()
-    if next(clients) == nil then
-      return msg
-    end
-    for _, client in ipairs(clients) do
-      local filetypes = client.config.filetypes
-      if filetypes and vim.fn.index(filetypes, buf_ft) ~= -1 then
-        return client.name
-      end
-    end
-    return msg
-  end,
-  icon = ' LSP:',
-  color = { fg = '#ffffff', gui = 'bold' },
-}
-
-lualine.setup(config)
