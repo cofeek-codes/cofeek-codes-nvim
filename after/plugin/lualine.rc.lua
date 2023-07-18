@@ -60,28 +60,4 @@ ins_right {
   color = { fg = '#ffffff', gui = 'bold' },
 }
 
-
-
-
-
-ins_left {
-  'lsp_progress',
-  display_components = { 'lsp_client_name', { 'title', 'percentage', 'message' } },
-  -- With spinner
-  display_components = { 'lsp_client_name', 'spinner', { 'title', 'percentage', 'message' } },
-  separators = {
-    component = ' ',
-    progress = ' | ',
-    message = { pre = '(', post = ')' },
-    percentage = { pre = '', post = '%% ' },
-    title = { pre = '', post = ': ' },
-    lsp_client_name = { pre = '[', post = ']' },
-    spinner = { pre = '', post = '' },
-    message = { commenced = 'In Progress', completed = 'Completed' },
-  },
-  display_components = { 'spinner', { 'title', 'percentage', 'message' } },
-  timer = { progress_enddelay = 1000, spinner = 1000, },
-  spinner_symbols = { '🌑 ', '🌒 ', '🌓 ', '🌔 ', '🌕 ', '🌖 ', '🌗 ', '🌘 ' },
-}
-
 lualine.setup(config)

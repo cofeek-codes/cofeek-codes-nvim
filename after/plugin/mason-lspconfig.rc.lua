@@ -3,7 +3,12 @@ if not status then
 	return
 end
 
-require("mason").setup()
+require("mason").setup({
+	ui = {
+		height = 0.85,
+		border = "rounded",
+	}
+})
 require("mason-lspconfig").setup()
 
 mason.setup({
