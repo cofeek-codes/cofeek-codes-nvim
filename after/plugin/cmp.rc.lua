@@ -39,6 +39,27 @@ local borderstyle = {
 }
 
 
+local formatForTailwindCSS = function(entry, vim_item)
+    if vim_item.kind == "Color" and entry.completion_item.documentation then
+        local _, _, r, g, b = string.find(entry.completion_item.documentation, "^rgb%((%d+), (%d+), (%d+)")
+        if r then
+            local color = string.format("%02x", r) .. string.format("%02x", g) .. string.format("%02x", b)
+            local group = "Tw_" .. color
+            if vim.fn.hlID(group) < 1 then
+                vim.api.nvim_set_hl(0, group, { fg = "#" .. color })
+            end
+            vim_item.kind = "●" -- or "■" or anything
+            vim_item.kind_hl_group = group
+            return vim_item
+        end
+    end
+    -- vim_item.kind = icons[vim_item.kind] and (icons[vim_item.kind] .. vim_item.kind) or vim_item.kind
+    -- or just show the icon
+    vim_item.kind = lspkind.symbolic(vim_item.kind) and lspkind.symbolic(vim_item.kind) or vim_item.kind
+    return vim_item
+end
+
+
 cmp.setup(
     {
         snippet = {
@@ -63,28 +84,19 @@ cmp.setup(
 
         formatting = {
             fields = { "kind", "abbr", "menu" },
-            format = function(entry, vim_item)
-                vim_item.menu =
-                    ({
-                        nvim_lsp = "[LSP]",
-                        luasnip = "[Snip]",
-                        buffer = "[Buff]",
-                        path = "[Path]"
-                    })[entry.source.name]
-
-                -- for tailwind colors
-                if vim_item.kind == "Color" then
-                    vim_item = require("cmp-tailwind-colors").format(entry, vim_item)
-
-                    if vim_item.kind ~= "Color" then
-                        vim_item.menu = "Color"
-                        return vim_item
-                    end
-                end
-
-                vim_item.kind = string.format("%s", kind_icons[vim_item.kind])
-                return vim_item
-            end
+            format = lspkind.cmp_format({
+                mode = "symbol_text",
+                maxwidth = 50,
+                before = function(entry, vim_item)
+                    vim_item.menu = "(" .. vim_item.kind .. ")"
+                    vim_item.dup = ({
+                        nvim_lsp = 0,
+                        path = 0,
+                    })[entry.source.name] or 0
+                    vim_item = formatForTailwindCSS(entry, vim_item) -- for tailwind css autocomplete
+                    return vim_item
+                end,
+            }),
         },
         preselect = cmp.PreselectMode.None,
         completion = { completeopt = "noselect" },
@@ -112,10 +124,3 @@ cmp.setup(
         },
     }
 )
-
-
-
-
--- " Use <Tab> and <S-Tab> to navigate through popup menu
--- inoremap <expr> <Tab>   pumvisible() ? "\<C-n>" : "\<Tab>"
--- inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
