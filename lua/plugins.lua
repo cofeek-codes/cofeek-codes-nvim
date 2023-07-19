@@ -15,9 +15,17 @@ vim.opt.rtp:prepend(lazypath)
 local p = {
 
 
-	{
-		"hoob3rt/lualine.nvim",
+	-- {
+	-- 	"hoob3rt/lualine.nvim",
 
+	-- },
+	{
+		"freddiehaddad/feline.nvim",
+
+
+	},
+	{
+		"lewis6991/gitsigns.nvim"
 	},
 	{
 		"nvim-neo-tree/neo-tree.nvim",
