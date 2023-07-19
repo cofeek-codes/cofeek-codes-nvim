@@ -1,13 +1,13 @@
 local status, saga = pcall(require, "lspsaga")
-if (not status) then return end
+if not status then
+	return
+end
 
 saga.setup({
-  ui = {
-    border = "rounded"
-  }
+	ui = {
+		border = "rounded",
+	},
 })
-
-
 
 -- local opts = { noremap = true, silent = true }
 -- vim.keymap.set('n', '<C-j>', '<Cmd>Lspsaga diagnostic_jump_next<CR>', opts)
@@ -17,7 +17,6 @@ saga.setup({
 -- vim.keymap.set('n', 'gp', '<Cmd>Lspsaga peek_definition<CR>', opts)
 -- vim.keymap.set('n', '<F2>', '<Cmd>Lspsaga rename<CR>', opts)
 -- vim.keymap.set('n', 'g.', '<Cmd>Lspsaga code_action<CR>', opts)
-
 
 local keymap = vim.keymap.set
 -- Lsp finder find the symbol definition implement reference
@@ -29,9 +28,8 @@ keymap("n", "gh", "<cmd>Lspsaga lsp_finder<CR>")
 -- Float terminal
 keymap({ "n", "t" }, "<A-t>", "<cmd>Lspsaga term_toggle<CR>")
 
-
 -- Code action
-keymap("n", "g.", "<cmd>Lspsaga code_action<CR>")
+keymap("n", "<C-c>", "<cmd>Lspsaga code_action<CR>")
 
 -- Rename
 keymap("n", "<F2>", "<cmd>Lspsaga rename<CR>")
@@ -62,10 +60,10 @@ keymap("n", "<C-j>", "<cmd>Lspsaga diagnostic_jump_next<CR>")
 
 -- Diagnostic jump with filter like Only jump to error
 keymap("n", "[E", function()
-  require("lspsaga.diagnostic").goto_prev({ severity = vim.diagnostic.severity.ERROR })
+	require("lspsaga.diagnostic").goto_prev({ severity = vim.diagnostic.severity.ERROR })
 end)
 keymap("n", "]E", function()
-  require("lspsaga.diagnostic").goto_next({ severity = vim.diagnostic.severity.ERROR })
+	require("lspsaga.diagnostic").goto_next({ severity = vim.diagnostic.severity.ERROR })
 end)
 
 -- Toglle Outline
