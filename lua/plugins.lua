@@ -15,24 +15,24 @@ vim.opt.rtp:prepend(lazypath)
 local p = {
 
 
-	-- {
-	-- 	"hoob3rt/lualine.nvim",
 
-	-- },
 	{
 		"freddiehaddad/feline.nvim",
 
 
 	},
 	{
-		"lewis6991/gitsigns.nvim"
+		"lewis6991/gitsigns.nvim",
+		dependencies = {
+			"nvim-lua/plenary.nvim"
+		}
 	},
 	{
 		"nvim-neo-tree/neo-tree.nvim",
 		branch = "v2.x",
 		dependencies = {
 			"nvim-lua/plenary.nvim",
-			"kyazdani42/nvim-web-devicons", -- not strictly required, but recommended
+			"kyazdani42/nvim-web-devicons",
 			"MunifTanjim/nui.nvim",
 		},
 	},
