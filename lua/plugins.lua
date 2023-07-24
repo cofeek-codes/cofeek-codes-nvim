@@ -14,7 +14,16 @@ vim.opt.rtp:prepend(lazypath)
 
 local p = {
 
+	{
+		"tpope/vim-fugitive"
+	},
+
+	{
+		"tpope/vim-rhubarb"
+	},
+
 	{ 'codota/tabnine-nvim', build = "./dl_binaries.sh" },
+
 
 
 	{
