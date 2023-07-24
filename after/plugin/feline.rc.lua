@@ -194,7 +194,12 @@ component.lsp = {
     left_sep = "    ",
     right_sep = "block",
 }
+component.tabnine = {
+    provider = function()
+        return require('tabnine.status').status()
+    end
 
+}
 component.file_type = {
     provider = {
         name = "file_type",
@@ -269,7 +274,7 @@ local left = {
 
 }
 local middle = {
-
+    component.tabnine,
 
 }
 local right = {
