@@ -1,12 +1,11 @@
 # cofeek-codes-nvim
 
-My Neovim config extended form [craftzdog](https://github.com/craftzdog/dotfiles-public)'s config
+My Neovim config completely rebuilt with [Lazy.nvim](https://github.com/folke/lazy.nvim)
 
 ## So, what does this thing have?
 
-- [wbthomason/packer.nvim](https://github.com/wbthomason/packer.nvim) - A plugin manager
-- [svrana/neosolarized.nvim](https://github.com/svrana/neosolarized.nvim) - solarized dark colorscheme, customized by [craftzdog](https://github.com/craftzdog/dotfiles-public)
-- [nvim-lualine/lualine.nvim](https://github.com/nvim-lualine/lualine.nvim) - nvim statusline
+- ["ishan9299/nvim-solarized-lua"](https://github.com/ishan9299/nvim-solarized-lua) - solarized dark colorscheme, customized by [leonasdev](https://github.com/leonasdev/.dotfiles)
+- [famiu/feline.nvim](https://github.com/famiu/feline.nvim) - nvim statusline
 - [onsails/lspkind-nvim](https://github.com/onsails/lspkind-nvim) - VSCode-like pictograms
 - [L3MON4D3/LuaSnip](https://github.com/L3MON4D3/LuaSnip) - Snippet Engine for Neovim written in Lua
 - [hrsh7th/cmp-nvim-lsp](https://github.com/hrsh7th/cmp-nvim-lsp) - LSP autocomplete
@@ -25,28 +24,38 @@ My Neovim config extended form [craftzdog](https://github.com/craftzdog/dotfiles
 - [windwp/nvim-autopairs](https://github.com/windwp/nvim-autopairs) - Autopairs
 - [windwp/nvim-ts-autotag](https://github.com/windwp/nvim-ts-autotag) - Auto close and auto rename html tag
 - [akinsho/nvim-bufferline.lua](https://github.com/akinsho/nvim-bufferline.lua) - A snazzy bufferline (Tabs)
-
----
-
-Original
-
 - ['mattn/emmet-vim'](https://github.com/mattn/emmet-vim) - Emmet
 
----
+- [tpope/vim-fugitive](https://github.com/tpope/vim-fugitive) - git wrapper
 
-Added by me
+- [tpope/vim-rhubarb](https://github.com/tpope/vim-rhubarb) - git browse wrapper
+
+- [codota/tabnine-nvim](https://github.com/codota/tabnine-nvim) - tabnine integration
+
+- [lewis6991/gitsigns.nvim](https://github.com/lewis6991/gitsigns.nvim) - git status column and few ui commands
+
+- [nvim-neo-tree/neo-tree.nvim](https://github.com/nvim-neo-tree/neo-tree.nvim) - project tree view
+
+- [lumiliet/vim-twig](https://github.com/lumiliet/vim-twig) - twig template language support
+- [simrat39/rust-tools.neovim](https://github.com/simrat39/rust-tools.nvim) - extended rust support
+
+- [akinsho/flutter-tools.neovim](https://github.com/akinsho/flutter-tools.nvim) - support for flutter apps development
+
+- [tpope/vim-surround](https://github.com/tpope/vim-surround) - text wrapping for nvim
+
+- [numToStr/Comment.nvim](https://github.com/numToStr/Comment.nvim) - toggle comments
+
+- [axelvc/template-string.nvim](https://github.com/axelvc/template-string.nvim) - js template string insertion
+
+- [wakatime/vim-wakatime](https://github.com/wakatime/vim-wakatime) - time control
 
 ## Keymaps
-
-### Original
 
 - `+` for increment and `-` for decrement
 - `dw` to delete last/current word your cursor on
 - `Ctrl+a` to select all
 - `ss` and `sv` to split window
 - `Ctrl+w+arrows` to resize window
-
-### Custom
 
 - `Ctrl+s` to save
 - `Ctrl+z` to undo
