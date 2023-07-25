@@ -71,3 +71,4 @@ My Neovim config completely rebuilt with [Lazy.nvim](https://github.com/folke/la
 - `Ctrl+g` to open gitsigns menu
 - `Ctrl+j` to go to next error/warn/info using lspsaga
 - `Ctrl+c` to use open code actions menu
+- `cc` to copy to clipboard

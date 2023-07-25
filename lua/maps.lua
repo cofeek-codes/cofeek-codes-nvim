@@ -63,6 +63,9 @@ vim.keymap.set("n", "<Ctrl-u>", "<Ctrl-u>zz")
 vim.keymap.set("n", "{", "{zz")
 vim.keymap.set("n", "}", "}zz")
 
-
 -- gitsigns menu
 vim.keymap.set("n", "<C-g>", "<cmd>Gitsigns<CR>")
+
+-- copy to clipboard
+
+vim.keymap.set({ "n", "v" }, "cc", [["+y]])
