@@ -11,10 +11,11 @@ null_ls.setup({
 		null_ls.builtins.formatting.prettier.with({
 			extra_args = { "--no-semi", "--use-tabs", "--single-quote", "--jsx-single-quote", "--arrow-parens=avoid" },
 		}),
-		null_ls.builtins.diagnostics.fish,
 		null_ls.builtins.formatting.autopep8,
 		null_ls.builtins.formatting.phpcbf,
 		null_ls.builtins.formatting.golines,
+		null_ls.builtins.formatting.goimports,
+		null_ls.builtins.formatting.goimports_reviser,
 		null_ls.builtins.formatting.cmake_format,
 		null_ls.builtins.formatting.rustfmt,
 		null_ls.builtins.formatting.dart_format,
