@@ -103,6 +103,7 @@ nvim_lsp.omnisharp.setup {}
 nvim_lsp.gopls.setup {}
 nvim_lsp.prismals.setup {}
 nvim_lsp.cmake.setup{}
+nvim_lsp.bashls.setup {}
 nvim_lsp.clangd.setup{}
 nvim_lsp.dartls.setup{}
 nvim_lsp.rust_analyzer.setup({

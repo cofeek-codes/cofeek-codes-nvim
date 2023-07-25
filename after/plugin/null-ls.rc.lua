@@ -20,6 +20,7 @@ null_ls.setup({
 		null_ls.builtins.formatting.rustfmt,
 		null_ls.builtins.formatting.dart_format,
 		null_ls.builtins.formatting.stylua,
+		null_ls.builtins.formatting.shfmt,
 	},
 	on_attach = function(client, bufnr)
 		if client.server_capabilities.documentFormattingProvider then

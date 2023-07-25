@@ -56,8 +56,6 @@ vim.keymap.set("n", "<C-e>", function()
 end)
 
 telescope.load_extension("file_browser")
--- full search
--- changed by cofeek-codes | original ";f"
 vim.keymap.set("n", ";f", function()
 	builtin.find_files({
 		no_ignore = false,
