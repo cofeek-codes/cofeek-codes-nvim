@@ -4,7 +4,7 @@ My Neovim config completely rebuilt with [Lazy.nvim](https://github.com/folke/la
 
 ## So, what does this thing have?
 
-- ["ishan9299/nvim-solarized-lua"](https://github.com/ishan9299/nvim-solarized-lua) - solarized dark colorscheme, customized by [leonasdev](https://github.com/leonasdev/.dotfiles)
+- [ishan9299/nvim-solarized-lua](https://github.com/ishan9299/nvim-solarized-lua) - solarized dark colorscheme, customized by [leonasdev](https://github.com/leonasdev/.dotfiles)
 - [famiu/feline.nvim](https://github.com/famiu/feline.nvim) - nvim statusline
 - [onsails/lspkind-nvim](https://github.com/onsails/lspkind-nvim) - VSCode-like pictograms
 - [L3MON4D3/LuaSnip](https://github.com/L3MON4D3/LuaSnip) - Snippet Engine for Neovim written in Lua
@@ -66,3 +66,8 @@ My Neovim config completely rebuilt with [Lazy.nvim](https://github.com/folke/la
 - `F2` to rename
 - `Ctrl+]` to go to insert mode
 - `<Emmet shortcut>,,` to emmet autocomplete
+
+- VISUAL LINE: `J/K` to move line down/up
+- `Ctrl+g` to open gitsigns menu
+- `Ctrl+j` to go to next error/warn/info using lspsaga
+- `Ctrl+c` to use open code actions menu
