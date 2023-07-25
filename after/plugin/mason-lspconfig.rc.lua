@@ -44,5 +44,6 @@ require("mason-null-ls").setup({
 		"goimports",
 		"goimports_reviser",
 		"shfmt",
+		"shellcheck"
 	},
 })

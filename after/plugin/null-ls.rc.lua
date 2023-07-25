@@ -21,6 +21,7 @@ null_ls.setup({
 		null_ls.builtins.formatting.dart_format,
 		null_ls.builtins.formatting.stylua,
 		null_ls.builtins.formatting.shfmt,
+		null_ls.builtins.code_actions.shellcheck
 	},
 	on_attach = function(client, bufnr)
 		if client.server_capabilities.documentFormattingProvider then
