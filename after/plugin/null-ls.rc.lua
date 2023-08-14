@@ -9,7 +9,7 @@ null_ls.setup({
 	sources = {
 
 		null_ls.builtins.formatting.prettier.with({
-			extra_args = { "--no-semi", "--use-tabs", "--single-quote", "--jsx-single-quote", "--arrow-parens=avoid" },
+			extra_args = { "--no-semi", "--single-quote", "--jsx-single-quote", "--arrow-parens=avoid" },
 		}),
 		null_ls.builtins.formatting.autopep8,
 		null_ls.builtins.formatting.phpcbf,
