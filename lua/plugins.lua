@@ -15,27 +15,23 @@ vim.opt.rtp:prepend(lazypath)
 local p = {
 
 	{
-		"tpope/vim-fugitive"
+		"tpope/vim-fugitive",
 	},
 
 	{
-		"tpope/vim-rhubarb"
+		"tpope/vim-rhubarb",
 	},
 
-	{ 'codota/tabnine-nvim', build = "./dl_binaries.sh" },
-
-
+	{ "codota/tabnine-nvim", build = "./dl_binaries.sh" },
 
 	{
 		"freddiehaddad/feline.nvim",
-
-
 	},
 	{
 		"lewis6991/gitsigns.nvim",
 		dependencies = {
-			"nvim-lua/plenary.nvim"
-		}
+			"nvim-lua/plenary.nvim",
+		},
 	},
 	{
 		"nvim-neo-tree/neo-tree.nvim",
@@ -124,67 +120,33 @@ local p = {
 		end,
 	},
 
-
 	-- time control
 	"wakatime/vim-wakatime",
 	{
-		"ishan9299/nvim-solarized-lua",
-		lazy = false, -- make sure we load this during startup if it is your main colorscheme
-		priority = 1000, -- make sure to load this before all the other start plugins
-		config = function()
-			vim.api.nvim_create_autocmd(
-				"ColorScheme",
-				{
-					pattern = "solarized",
-					callback = function()
-						vim.api.nvim_set_hl(0, 'NormalFloat', { bg = 'none' })
-						vim.api.nvim_set_hl(0, 'Pmenu', { link = 'TelescopeNormal' })
-						vim.api.nvim_set_hl(0, 'LineNr', { fg = '#586e75', bg = 'none' })
-						vim.api.nvim_set_hl(0, 'CursorLineNr', { fg = '#b58900', bg = 'none' })
-						vim.api.nvim_set_hl(0, 'CursorLine', { fg = 'none', bg = '#002b36' })
-						vim.api.nvim_set_hl(0, 'Visual', { fg = '#002b36', bg = '#586e75' })
-						vim.api.nvim_set_hl(0, 'DiagnosticVirtualTextError', { fg = '#dc322f', bg = '#360909' })
-						vim.api.nvim_set_hl(0, 'DiagnosticVirtualTextWarn', { fg = '#b58900', bg = '#1c1500' })
-						vim.api.nvim_set_hl(0, 'DiagnosticVirtualTextInfo', { fg = '#268bd2', bg = '#0e3550' })
-						vim.api.nvim_set_hl(0, 'DiagnosticVirtualTextHint', { fg = '#2aa198', bg = '#0a2725' })
-						vim.api.nvim_set_hl(0, 'PmenuSel', { bg = '#586e75' })
-						vim.api.nvim_set_hl(0, 'LazyButton', { link = "Visual" })
-						vim.api.nvim_set_hl(0, 'LazyButtonActive', { link = "IncSearch" })
-						vim.cmd('highlight GitSignsAdd guibg=none')
-						vim.cmd('highlight GitSignsChange guibg=none')
-						vim.cmd('highlight GitSignsDelete guibg=none')
-					end,
-					group = vim.api.nvim_create_augroup("FixSolarized", { clear = true }),
-					desc = "Fix some highlight for solarized colorscheme"
-				}
-			)
-
-			vim.g.solarized_termtrans = 1
-			vim.cmd("colorscheme solarized")
-		end
+		"blazkowolf/gruber-darker.nvim",
 	},
 	{
-		'mrcjkb/haskell-tools.nvim',
+		"mrcjkb/haskell-tools.nvim",
 		dependencies = {
-			'nvim-lua/plenary.nvim',
-			'nvim-telescope/telescope.nvim', -- optional
+			"nvim-lua/plenary.nvim",
+			"nvim-telescope/telescope.nvim", -- optional
 		},
 		ft = "haskell",
 		config = function()
-			local ht = require('haskell-tools')
-			local def_opts = { noremap = true, silent = true, }
-			ht.start_or_attach {
+			local ht = require("haskell-tools")
+			local def_opts = { noremap = true, silent = true }
+			ht.start_or_attach({
 				hls = {
 					on_attach = function(client, bufnr)
-						local opts = vim.tbl_extend('keep', def_opts, { buffer = bufnr, })
+						local opts = vim.tbl_extend("keep", def_opts, { buffer = bufnr })
 						-- haskell-language-server relies heavily on codeLenses,
 						-- so auto-refresh (see advanced configuration) is enabled by default
-						vim.keymap.set('n', '<C-h>c', vim.lsp.codelens.run, opts)
-						vim.keymap.set('n', 'K', ht.hoogle.hoogle_signature, opts)
-						vim.keymap.set('n', '<C-h>a', ht.lsp.buf_eval_all, opts)
+						vim.keymap.set("n", "<C-h>c", vim.lsp.codelens.run, opts)
+						vim.keymap.set("n", "K", ht.hoogle.hoogle_signature, opts)
+						vim.keymap.set("n", "<C-h>a", ht.lsp.buf_eval_all, opts)
 					end,
 				},
-			}
+			})
 
 			-- Suggested keymaps that do not depend on haskell-language-server:
 			local bufnr = vim.api.nvim_get_current_buf()
@@ -192,22 +154,21 @@ local p = {
 			local opts = { noremap = true, silent = true, buffer = bufnr }
 
 			-- Toggle a GHCi repl for the current package
-			vim.keymap.set('n', '<C-h>rf', ht.repl.toggle, opts)
+			vim.keymap.set("n", "<C-h>rf", ht.repl.toggle, opts)
 			-- Toggle a GHCi repl for the current buffer
-			vim.keymap.set('n', '<C-h>rr', function()
+			vim.keymap.set("n", "<C-h>rr", function()
 				ht.repl.toggle(vim.api.nvim_buf_get_name(0))
 			end, def_opts)
-			vim.keymap.set('n', '<C-h>rq', ht.repl.quit, opts)
+			vim.keymap.set("n", "<C-h>rq", ht.repl.quit, opts)
 			-- dap.discover_configurations(bufnr)
 		end,
-		branch = '1.x.x', -- recommended
-	}
+		branch = "1.x.x", -- recommended
+	},
 }
-
 
 require("lazy").setup(p, {
 	install = {
-		colorscheme = { "solarized", "habamax" }
+		colorscheme = { "solarized", "habamax" },
 	},
 	ui = {
 		border = "rounded",
@@ -221,7 +182,7 @@ require("lazy").setup(p, {
 				"tohtml",
 				"tutor",
 				"zipPlugin",
-			}
-		}
-	}
+			},
+		},
+	},
 })
